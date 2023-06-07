@@ -14,6 +14,7 @@ services:
     # which has trouble seeing file changes, so add -L to use legacy polling
     # https://github.com/remy/nodemon#application-isnt-restarting
     #command: ../node_modules/.bin/nodemon --debug=0.0.0.0:5858
+    image: ariehbe/webapp2:${BUILD_ID}
     command: ../node_modules/.bin/nodemon --inspect=0.0.0.0:9229 ./bin/www
     ports:
       - "80:3000"
